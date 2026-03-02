@@ -1,4 +1,4 @@
 package introduction;
 
-public class profesori {
+public class Professor {
 }
