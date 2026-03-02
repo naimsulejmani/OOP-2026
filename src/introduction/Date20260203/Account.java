@@ -3,10 +3,27 @@ package introduction.Date20260203;
 
 //modifikatori_i_qasjes class EmriKlases {} -> EmriIKlases = EmrinEFajllit
 public class Account {
+    //variables
     //instance variable, attribute,data,fields
     private String name;
     private double balance;
 
+    //constructors
+//    public Account() {
+//        //default constructor
+//    }
+
+    public Account(String name, double balance) {
+        this.name = name;
+        this.balance = balance;
+    }
+
+    public Account(String name) {
+        this.name = name;
+    }
+
+
+    //methods -> get,set,....
 
     public void setName(String _name) {
         if (_name == null || _name.isBlank() || _name.trim().length() < 2) {
