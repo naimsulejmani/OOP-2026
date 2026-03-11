@@ -45,4 +45,11 @@ public class Dog {
     }
 
 
+    public double getWeight() {
+        return weight;
+    }
+
+    public String getFavouriteToy() {
+        return favouriteToy;
+    }
 }

@@ -15,5 +15,10 @@ public class DogDemo {
         System.out.println(dog1.getName());
         System.out.println(dog2.getName());
 
+
+        Dog dog4 = new Dog();
+        System.out.println(dog4.getName());
+        System.out.println(dog4.getWeight());
+
     }
 }
