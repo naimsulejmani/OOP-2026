@@ -2,18 +2,17 @@ package introduction.composition_and_aggregation.online;
 
 import introduction.ushtrime_class_enums.Point;
 
-public class AntiAircraftGun {
+public class Bomber {
     private Point position = new Point();
     private int health = 100;
-    private Bomber target;
+    private AntiAircraftGun target;
 
-
-    public AntiAircraftGun(Point position, int health) {
+    public Bomber(Point position, int health) {
         setPosition(position);
         setHealth(health);
     }
 
-    public AntiAircraftGun() {
+    public Bomber() {
         this(new Point(), 100);
     }
 
@@ -33,6 +32,15 @@ public class AntiAircraftGun {
         return health;
     }
 
+    public AntiAircraftGun getTarget() {
+        return target;
+    }
+
+    public void setTarget(AntiAircraftGun target) {
+        this.target = target;
+    }
+
+
     public void setHealth(int health) {
         if (health < 0) {
             System.out.println("Health cannot be negative");
@@ -40,15 +48,6 @@ public class AntiAircraftGun {
             return;
         }
         this.health = health;
-    }
-
-
-    public Bomber getTarget() {
-        return target;
-    }
-
-    public void setTarget(Bomber target) {
-        this.target = target;
     }
 
     public boolean isInRadar() {
@@ -70,7 +69,7 @@ public class AntiAircraftGun {
 
     @Override
     public String toString() {
-        return "AntiAircraftGun{" +
+        return "Bomber{" +
                 "position=" + position +
                 ", health=" + health +
                 '}';
