@@ -6,5 +6,6 @@ public enum TodoMenu {
     DELETE,
     FIND_ONE,
     FIND_ALL,
+    COMPLETE_TODO,
     EXIT
 }

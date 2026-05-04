@@ -108,7 +108,7 @@ public class TodoItem {
 
 
     public String toRow() {
-        return String.format("|%3d|%50s|%10s|%20s|%2s|%n",
+        return String.format("|%-3d|%-50s|%-10s|%-20s|%-2s|",
                 this.id,this.title,this.dueDate,this.importance,
                 this.completed ? "✅":"x");
     }
