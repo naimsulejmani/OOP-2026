@@ -13,10 +13,9 @@ public class Student extends Person {
         super.setId(1);
     }
 
-    public void setId(int id) {
-        if(id<0) {
-            return;
-        }
-        super.setId(id);
+    @Override
+    public String toString() {
+        return "Student -> "+super.toString();
     }
+
 }

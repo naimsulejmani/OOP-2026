@@ -7,9 +7,9 @@ public class Person extends Object {
     private String phoneNumber;
     protected String email;
 
-//    public Person() {
-//
-//    }
+    public Person() {
+
+    }
 
     public Person(int id, String name, String address, String phoneNumber, String email) {
         this.id = id;
@@ -23,7 +23,8 @@ public class Person extends Object {
         return id;
     }
 
-    public void setId(int id) {
+
+    public final void setId(int id) {
         this.id = id;
     }
 
@@ -57,5 +58,10 @@ public class Person extends Object {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+
+    public String toString() {
+        return "Person [id=" + id + ", name=" + name + ", address=" + address + ", phoneNumber=" + phoneNumber + ", email=" + email + "]";
     }
 }
