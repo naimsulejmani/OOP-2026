@@ -7,5 +7,9 @@ public class Rock {
         this.description = description;
     }
 
+    public Rock() {
+
+    }
+
     //Enter Guri: Basalt => me kriju objektin ne menyre dinamike
 }
