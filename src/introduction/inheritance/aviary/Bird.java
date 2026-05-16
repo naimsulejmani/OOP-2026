@@ -9,6 +9,7 @@ public class Bird {
     private MovementType movement;
 
     public Bird(String call, String color, String food, MovementType movement) {
+        super();
         this.call = call;
         this.color = color;
         this.food = food;
