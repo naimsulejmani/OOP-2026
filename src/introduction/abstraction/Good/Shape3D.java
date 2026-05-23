@@ -1,0 +1,5 @@
+package introduction.abstraction.Good;
+
+public abstract class Shape3D extends Shape {
+    public abstract double volume();
+}
