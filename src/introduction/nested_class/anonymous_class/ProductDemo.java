@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class ProductDemo {
     static void main() {
@@ -12,11 +13,16 @@ public class ProductDemo {
         Product p2 = new Product(2, "B", "BBB", BigDecimal.ONE, LocalDate.now().plusDays(10), false, "Shkronje", 333);
         Product p3 = new Product(3, "C", "CCC", BigDecimal.valueOf(30), LocalDate.now().minusMonths(1), true, "Test", 4122);
 
+
+
+
         List<Product> products = new ArrayList<>();
         products.add(p1);
         products.add(p2);
         products.add(p3);
-
+        //grouping by active
+        Map<Boolean, List<Product>> groupedByActive = products.stream().collect(Collectors.groupingBy(Product::isActive));
+        System.out.println(groupedByActive);
 //        System.out.println(p1.compareTo(p3));
 
         Comparator<Product> priceComparator = new Comparator<Product>() {
